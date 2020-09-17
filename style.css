@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+ body{
+     overflow-x: hidden;
+ }
+
+ .animate{
+    animation: animation 10s cubic-bezier(0.075, 0.82, 0.165, 1)  both;
+ }
+
+ svg{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     z-index: 999999;
+     stroke-dashoffset: 1000px;
+     stroke-dasharray: 1000px;
+     
+ }
+#background{
+   
+    height: 100%;
+    width: 100%;
+    background: black;
+   
+}
+
+#wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+    background-position: 60%;
+    background-image: url(https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+}
+
+#circle{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 50px;
+    z-index: 999999999;
+    pointer-events: none;
+    border-radius:50%;
+    border: 1.2px solid #ffff;
+}
+
+#background h1{
+    color: #fff;
+    font-size: 520px;
+    font-family: 'Montserrat';
+   font-weight: 900;
+}
+
+#strip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 120px;
+    width: 53%;
+    transform: translate(0, -50%);
+    background-color: white;
+}
+
+#blackcard{
+    display: flex;
+    justify-content: center ;
+    text-align: center;
+    padding: 30px;
+    width: 170px;
+    height: 240px;
+    background-color: black;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+}
+
+#blackcard p{
+    font-size: 10px;
+    line-height: 17px;
+   text-align: center;
+    color: white;
+    font-family: sans-serif;
+}
+
+
+#lineElem{
+    display: flex;
+    align-items: center;
+}
+
+#lineElem .line{
+    height: 2px;
+    margin: 0 30px;
+    width: 200px;
+    background-color:black;
+}
+#lineElem{
+    font-family: 'Kumbh Sans', sans-serif;
+   font-size: 13px;  
+}
+
+#lineElem i{
+ cursor: pointer;
+}
+
+#background>h5{
+    position: absolute;
+    top: 50%;
+    color: white;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-weight: 600;
+    transform: rotate(-90deg);
+    letter-spacing: 15px;
+    font-size: 10px;
+}
+
+@keyframes animation{
+    to{
+        stroke-dasharray: 450px;
+    }
+}
